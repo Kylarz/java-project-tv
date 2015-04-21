@@ -22,9 +22,14 @@ public Divertissement (String type, int heure, String nom, String nom_animateur)
 
 }
 
+public String GetNom_Animateur() {
+
+    return nom_animateur;
+}
 
 
-public int HF ()
+
+public int HF () // Fonction déterminant l'heure de fin d'un programme
         
               
 {

@@ -20,7 +20,7 @@ public ProgrammeMere (String type, int heure, String nom) {
     
     this.type = type;
     this.heure = heure;
-    this.nom=nom;    
+    this.nom=nom;
 }
         
 
