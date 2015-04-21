@@ -11,23 +11,29 @@ package com.mycompany.tele;
  * @author frederic.gery
  */
 public class Divertissement extends ProgrammeMere {
-        public String animateur;
-        public int heure_deb;
-        public int heure_fin;
-        
-        
-        
+        public String nom_animateur;
 
+       
 
-public Divertissement (String animateur, int durée, String nom)
+public Divertissement (String type, int heure, String nom, String nom_animateur)
 {
-    super(type, nom, heure);
-    this.durée = 2;
-    this.animateur = "Bernard";
-    this.nom = "Pas_sans_mon_chat";
-    this.heure_deb=18; // A redéfinir après selon les autres classes
-    this.heure_fin=heure_deb+2;
+    super(type, heure, nom);
+    this.nom_animateur = nom_animateur;
+
+}
+
+
+
+public int HF ()
+        
+              
+{
 
 }
 }
+    
+    
+    
+    
+
 

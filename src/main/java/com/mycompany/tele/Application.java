@@ -32,14 +32,9 @@ public class Application
 
 
     
-
-
-     //   Date date = new Date();
         
-        Divertissement d;
-        
-        d = new Divertissement("Bernard", 2, "pas_sans_mon_chat");
-        System.out.println("Retrouvez notre cher " + d.animateur + " Dans : " + d.nom + " entre " + d.heure_deb + "h - " + d.heure_fin + "h");
+       // d = new Divertissement("Bernard", 2, "pas_sans_mon_chat");
+        //System.out.println("Retrouvez notre cher " + d.animateur + " Dans : " + d.nom + " entre " + d.heure_deb + "h - " + d.heure_fin + "h");
         // TODO code application logic here
     }
 }

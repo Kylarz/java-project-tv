@@ -12,8 +12,24 @@ package com.mycompany.tele;
  */
 public class ProgrammeMere {
     public String type;
-    public int durée;
+    public int heure;
     public String nom;
-    
+   
 
+public ProgrammeMere (String type, int heure, String nom) {
+    
+    this.type = type;
+    this.heure = heure;
+    this.nom=nom;    
 }
+        
+
+ 
+        
+
+        
+        
+        
+        
+        
+        }
