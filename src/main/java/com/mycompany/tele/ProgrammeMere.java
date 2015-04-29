@@ -8,7 +8,7 @@ package com.mycompany.tele;
 
 /**
  *
- * @author frederic.gery
+ * 
  */
 public class ProgrammeMere {
     public String type;
@@ -23,7 +23,27 @@ public ProgrammeMere (String type, int heure, String nom) {
     this.nom=nom;
 }
         
+public String GetType () {
 
+    return type;
+}
+
+public int GetHeure () {
+
+    return heure;
+}
+
+public String GetNom () {
+
+    return nom;
+}
+
+public int HF () // Fonction déterminant l'heure de fin d'un programme
+        
+              
+{
+    return HF();
+}
  
         
 

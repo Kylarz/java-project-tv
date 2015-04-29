@@ -8,7 +8,7 @@ package com.mycompany.tele;
 
 /**
  *
- * @author frederic.gery
+ * 
  */
 public class Divertissement extends ProgrammeMere {
         public String nom_animateur;
@@ -29,12 +29,17 @@ public String GetNom_Animateur() {
 
 
 
-public int HF () // Fonction déterminant l'heure de fin d'un programme
-        
-              
-{
 
+
+
+
+public String toString() {
+    
+    return String.format ("Divertissement -> [Type=/s, Nom=%s, Heure=%s, Durée=%s, Animateur=%s, HeureFin=%s]", type, nom, heure,2, nom_animateur, HF()); // Fonction HF dans l'affichage dans la méthode a tester, et à coder aussi. Le "2" est aussi à tester.
+    
 }
+
+
 }
     
     
