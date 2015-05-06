@@ -27,6 +27,7 @@ public class Application
         programmeList.add("reportage, 0, 3, test, culturel");
         programmeList.add("reportage, 2, 3, test, monde");
         programmeList.add("FICTION, 10, 2, A.I., 2001, Steven Spielberg, OUI");
+        programmeList.add("divertiSSement, 12, Vendreditoutestpermis, Arthur");
         
         for (String s :programmeList) {
             
@@ -47,6 +48,22 @@ public class Application
                 list_Report.add(new Reportage("Reportage", Integer.parseInt(TSplitted[1].trim()), Short.parseShort(TSplitted[2].trim()),TSplitted[3], TSplitted[4]));
               
             }
+            
+            
+		for (Divertissement d : list_Diver)
+		{
+			System.out.println(d.toString());
+		}
+                /*for (Reportage r : list_Report)
+		{
+			System.out.println(r.toString());
+		} */
+                
+                /*for (Fiction f : list_Fic)
+		{
+			System.out.println(f.toString());
+		} */
+                
             
             
             
