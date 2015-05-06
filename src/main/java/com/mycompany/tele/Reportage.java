@@ -13,19 +13,29 @@ package com.mycompany.tele;
 public class Reportage extends ProgrammeMere {
     
     public String theme;
-    public Short duree;
+
+public Reportage (String type, int heure, String nom, String theme, short duree)    {
     
     
-    
-public Reportage (String type, int heure, String nom, String theme)    {
-    
-    
-    super(type, heure, nom);
+    super(type, heure, nom, duree);
     this.theme = theme;
     this.duree= duree;
 }
 
 // Get de la classe à faire
+
+public String GetTheme() {
+    
+    return theme;
+}
+
+public short GetDuree() {
+    
+    return duree;
+}
+
+
+
 
 public String toString() {
     

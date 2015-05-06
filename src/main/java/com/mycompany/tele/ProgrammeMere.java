@@ -14,6 +14,7 @@ public class ProgrammeMere {
     public String type;
     public int heure;
     public String nom;
+    public short duree;
    
 
 public ProgrammeMere (String type, int heure, String nom) {
@@ -21,6 +22,15 @@ public ProgrammeMere (String type, int heure, String nom) {
     this.type = type;
     this.heure = heure;
     this.nom=nom;
+}
+
+public ProgrammeMere (String type, int heure, String nom, short duree) {
+    
+    this.type = type;
+    this.heure = heure;
+    this.nom= nom;
+    this.duree= duree;
+       
 }
         
 public String GetType () {
@@ -38,11 +48,9 @@ public String GetNom () {
     return nom;
 }
 
-public int HF () // Fonction déterminant l'heure de fin d'un programme
-        
-              
-{
-    return HF();
+public int HF () { // Fonction déterminant l'heure de fin d'un programme, va servir pour : reportage et fiction
+    return heure + duree;
+    
 }
  
         

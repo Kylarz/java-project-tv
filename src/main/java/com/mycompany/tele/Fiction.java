@@ -12,7 +12,7 @@ package com.mycompany.tele;
  */
 public class Fiction extends ProgrammeMere {
 
-    public short duree;
+
     public short annee;
     public String nom_realisateur;
     public boolean redif;
@@ -22,7 +22,7 @@ public class Fiction extends ProgrammeMere {
     
     public Fiction (String type, int heure, String nom, short duree, short annee,  String nom_realisateur, boolean redif) {
         
-        super(type,heure,nom);
+        super(type,heure,nom,duree);
         this.nom_realisateur= nom_realisateur;
         this.redif = redif;
         this.annee = annee;

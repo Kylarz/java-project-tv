@@ -28,6 +28,11 @@ public String GetNom_Animateur() {
 }
 
 
+public int HeureFin() { // Divertissement à sa propre fonction heurefin car pas de variable durée.
+    
+    return heure + 2;
+}
+
 
 
 
@@ -35,7 +40,7 @@ public String GetNom_Animateur() {
 
 public String toString() {
     
-    return String.format ("Divertissement -> [Type=/s, Nom=%s, Heure=%s, Durée=%s, Animateur=%s, HeureFin=%s]", type, nom, heure,2, nom_animateur, HF()); // Fonction HF dans l'affichage dans la méthode a tester, et à coder aussi. Le "2" est aussi à tester.
+    return String.format ("Divertissement -> [Type=/s, Nom=%s, Heure=%s, Durée=%s, Animateur=%s, HeureFin=%s]", type, nom, heure,2, nom_animateur, HeureFin()); // Fonction HF dans l'affichage dans la méthode a tester, et à coder aussi. Le "2" est aussi à tester.
     
 }
 
