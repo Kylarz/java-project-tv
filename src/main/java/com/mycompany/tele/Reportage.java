@@ -14,7 +14,7 @@ public class Reportage extends ProgrammeMere {
     
     public String theme;
 
-public Reportage (String type, int heure, String nom, String theme, short duree)    {
+public Reportage (String type, int heure, short duree, String nom, String theme)    {
     
     
     super(type, heure, nom, duree);
@@ -39,7 +39,7 @@ public short GetDuree() {
 
 public String toString() {
     
-    return String.format ("Fiction -> [Type=/s, Nom=%s, Heure=%s, Durée=%s, Theme=%s, HeureFin=%s]", type, nom, heure, duree, theme, HF());
+    return String.format ("Fiction -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Thème=%s, Heure de Fin=%s]", type, nom, heure, duree, theme, HF());
 
 }
     

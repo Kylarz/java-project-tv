@@ -10,7 +10,7 @@ package com.mycompany.tele;
  *
  * 
  */
-public class ProgrammeMere {
+abstract class ProgrammeMere {
     public String type;
     public int heure;
     public String nom;

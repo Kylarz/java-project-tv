@@ -20,7 +20,7 @@ public class Fiction extends ProgrammeMere {
     
     
     
-    public Fiction (String type, int heure, String nom, short duree, short annee,  String nom_realisateur, boolean redif) {
+    public Fiction (String type, int heure, short duree, String nom, short annee,  String nom_realisateur, boolean redif) {
         
         super(type,heure,nom,duree);
         this.nom_realisateur= nom_realisateur;
@@ -55,7 +55,7 @@ public boolean GetRedif () {
 
 public String toString() {
     
-    return String.format ("Fiction -> [Type=/s, Nom=%s, Heure=%s, Durée=%s, Année=%s, Nom du réalisateurr=%s, Rediffusion =%s, HeureFin=%s]", type, nom, heure, duree, annee, nom_realisateur, redif, HF());
+    return String.format ("Fiction -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Année=%s, Nom du réalisateurr=%s, Rediffusion =%s, HeureFin=%s]", type, nom, heure, duree, annee, nom_realisateur, redif, HF());
 
 }
 
