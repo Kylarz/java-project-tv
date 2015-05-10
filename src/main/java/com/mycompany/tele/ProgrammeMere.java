@@ -49,8 +49,7 @@ public String GetNom () {
 }
 
 public int HF () { // Fonction déterminant l'heure de fin d'un programme, va servir pour : reportage et fiction
-    return heure + duree;
-    
+    return heure + duree; 
 }
  
         
