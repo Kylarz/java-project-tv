@@ -39,7 +39,7 @@ public short GetDuree() {
 
 public String toString() {
     
-    return String.format ("Reportage -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Thème=%s, Heure de Fin=%s]", type, nom, heure, duree, theme, HF());
+    return String.format ("Reportage -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Thème=%s, Heure de Fin=%sh]", type, nom, heure, duree, theme, HF());
 
 }
     

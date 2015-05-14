@@ -55,7 +55,7 @@ public boolean GetRedif () {
 
 public String toString() {
     
-    return String.format ("Fiction -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Année=%s, Nom du réalisateurr=%s, Rediffusion =%s, HeureFin=%s]", type, nom, heure, duree, annee, nom_realisateur, redif, HF());
+    return String.format ("Fiction -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Année=%s, Nom du réalisateurr=%s, Rediffusion =%s, HeureFin=%sh]", type, nom, heure, duree, annee, nom_realisateur, redif, HF());
 
 }
 

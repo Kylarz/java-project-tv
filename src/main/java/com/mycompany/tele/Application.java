@@ -9,18 +9,26 @@ import java.io.*; // Librairie : http://docs.oracle.com/javase/7/docs/api/java/i
  */
 public class Application 
 {  
-    
+     
+        
     public static void main( String[] args )
     {
-        System.out.println( "Bienvenue, voici la liste des programmes :" );
-        ProgrammeMere[] TableauChaines;
-        TableauChaines = new ProgrammeMere[15];
         
-        ArrayList<Divertissement> list_Diver = new ArrayList<Divertissement>();
-        ArrayList<Fiction> list_Fic = new ArrayList<Fiction>();
-        ArrayList<Reportage> list_Report = new ArrayList();
+        ArrayList<Divertissement> list_Diver;
+        ArrayList<Fiction> list_Fic;
+        ArrayList<Reportage> list_Report;
+        boolean Grilletele[]; 
+              
+        list_Report = new ArrayList<Reportage>();
+        list_Fic = new ArrayList<Fiction>();
+        list_Diver = new ArrayList<Divertissement>();
+        Grilletele = new boolean [24];  
+        
+        System.out.println( "Bienvenue, voici la liste des programmes :" );
         
         ArrayList<String> programmeList = new ArrayList();
+        
+
         
         programmeList.add("fiction, 21, 2, A.I., 2001, Steven Spielberg, oui");
         programmeList.add("divertissement, 12, toto, titi");
@@ -28,15 +36,14 @@ public class Application
         programmeList.add("reportage, 2, 3, test, monde");
         programmeList.add("FICTION, 10, 2, A.I., 2001, Steven Spielberg, OUI");
         programmeList.add("divertiSSement, 12, Vendreditoutestpermis, Arthur");
-        programmeList.add("fiction, 21, 2, A.I., 2001, Steven Spielberg, oui");
+
 
         
         for (String s :programmeList) {
             
-            
-            
             String[] TSplitted = s.split(",");
             if (TSplitted[0].equalsIgnoreCase("Divertissement")) {
+                
                 list_Diver.add(new Divertissement("Divertissement", Integer.parseInt(TSplitted[1].trim()),TSplitted[2],TSplitted[3]));
               
             }
@@ -66,20 +73,16 @@ public class Application
 		{
 			System.out.println(f.toString());
 		}
+                
+                for (Fiction f : list_Fic) {
+                    for (Divertissement d : list_Diver) {
+                        if (d.heure = f.heure)
+                    }
+                }
+                
+                // Après vérification de l'énoncé, seul les programmes de types divertissement et fiction peuvent se croiser
              
-        }
-        
-        
-        
-        
-        
-        // d'autres programmes à ajouter
-
-
-        // A vous de traiter programmeList pour construire votre grille de programme
-
-        // L'objet String sera votre ami pour traiter facilement la chaine de caractères
-
+    }
    }
 
 

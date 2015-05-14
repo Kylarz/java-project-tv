@@ -40,7 +40,7 @@ public int HeureFin() { // Divertissement à sa propre fonction heurefin car pas
 
 public String toString() {
     
-    return String.format ("Divertissement -> [Type=%s, Heure=%s, Nom=%s, Durée=%s, Animateur=%s, HeureFin=%s]", type, heure, nom,2, nom_animateur, HeureFin());
+    return String.format ("Divertissement -> [Type=%s, Heure=%s, Nom=%s, Durée=%s, Animateur=%s, HeureFin=%sh]", type, heure, nom,2, nom_animateur, HeureFin());
     
 }
 
