@@ -4,23 +4,23 @@
  * and open the template in the editor.
  */
 
-package com.mycompany.tele;
+package com.mycompany.tele;                      // package utile au fonctionnement deu programme.
 
 /**
  *
  * 
  */
-public class Fiction extends ProgrammeMere {
+public class Fiction extends ProgrammeMere {                // Cette classe sert pour les programmes de fictions, elle hérite de la classe programmemere, cette classe est donc "la fille" de la classe mère. 
 
 
     public short annee;
     public String nom_realisateur;
-    public boolean redif;
+    public boolean redif;                                   // Elle prend pour attributs l'année de réalisation, le nom du réalisateur, et si il s'agit d'une rediffusion ou non. 
     
     
     
     
-    public Fiction (String type, int heure, short duree, String nom, short annee,  String nom_realisateur, boolean redif) {
+    public Fiction (String type, int heure, short duree, String nom, short annee,  String nom_realisateur, boolean redif) {  // méthode de polymorphisme. 
         
         super(type,heure,nom,duree);
         this.nom_realisateur= nom_realisateur;
@@ -31,29 +31,29 @@ public class Fiction extends ProgrammeMere {
         
     }
 
+                                    // Déclaration des getters utile à la classe fiction. Ils nous permettront d'accéder aux attributs privés ou protégés de cette classe. 
 
-
-public int GetDuree () {
+public int GetDuree () {            // getter de la durée
 
     return duree;
 }
 
-public int GetAnnee () {
+public int GetAnnee () {            // getter de l'année de réalisation.
 
     return annee;
 }
 
-public String GetNom_Realisateur () {
+public String GetNom_Realisateur () {    // getter du nom du réalisateur. 
 
     return nom_realisateur;
 }
 
-public boolean GetRedif () {
+public boolean GetRedif () {          // getter de la rediffusion.
 
     return redif;
 }
 
-public String toString() {
+public String toString() {              // On retourne une phrase qui nous donne le descriptif complet du programme de fiction diffusé grâce aux getters précedemment déclarés. 
     
     return String.format ("Fiction -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Année=%s, Nom du réalisateurr=%s, Rediffusion =%s, HeureFin=%sh]", type, nom, heure, duree, annee, nom_realisateur, redif, HF());
 
