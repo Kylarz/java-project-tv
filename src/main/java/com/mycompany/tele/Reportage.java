@@ -29,10 +29,19 @@ public String GetTheme() {          // getter du thème du reportage.
     return theme;
 }
 
+public void SetTheme(String _theme) {
+    this.theme=_theme;
+} 
+
 public short GetDuree() {           // getter de la durée. 
     
     return duree;
 }
+
+public void SetDuree(short _duree) {
+    this.duree=_duree;
+} 
+
 
 
 

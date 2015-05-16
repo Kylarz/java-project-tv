@@ -27,6 +27,10 @@ public String GetNom_Animateur() {                              // getter du nom
     return nom_animateur;
 }
 
+public void SetDuree(String _nom_animateur) {
+    this.nom_animateur=_nom_animateur;
+} 
+
 
 public int HeureFin() {                     // Divertissement à sa propre fonction heurefin, car pas de variable durée.
     

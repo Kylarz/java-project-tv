@@ -38,20 +38,38 @@ public int GetDuree () {            // getter de la durée
     return duree;
 }
 
+public void SetDuree(short _duree) {
+    this.duree=_duree;
+} 
+
 public int GetAnnee () {            // getter de l'année de réalisation.
 
     return annee;
 }
+
+public void GetAnnee(short _annee) {
+this.annee=_annee;
+} 
 
 public String GetNom_Realisateur () {    // getter du nom du réalisateur. 
 
     return nom_realisateur;
 }
 
+public void SetNom_Realisateur(String _nom_realisateur) {
+this.nom_realisateur=_nom_realisateur;
+} 
+
 public boolean GetRedif () {          // getter de la rediffusion.
 
     return redif;
 }
+
+public void SetNom_Realisateur(boolean _redif) {
+this.redif=_redif;
+}
+
+
 
 public String toString() {              // On retourne une phrase qui nous donne le descriptif complet du programme de fiction diffusé grâce aux getters précedemment déclarés. 
     
