@@ -17,7 +17,7 @@ public class Reportage extends ProgrammeMere {           // Cette classe sert po
 public Reportage (String type, int heure, short duree, String nom, String theme)    {
     
     
-    super(type, heure, nom, duree);                     // La méthode super () est expliqué dans divertissement.java. Ici, on récupère le type, l'heure, le nom et la durée de la classe mère. 
+    super(type,heure,duree, nom);                     // La méthode super () est expliqué dans divertissement.java. Ici, on récupère le type, l'heure, le nom et la durée de la classe mère. 
     this.theme = theme;
     this.duree= duree;
 }
@@ -39,7 +39,7 @@ public short GetDuree() {           // getter de la durée.
 
 public String toString() {          // On retourne une phrase qui nous donne le descriptif complet du programme de reportage diffusé grâce aux getters précedemment déclarés.
     
-    return String.format ("Reportage -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Thème=%s, Heure de Fin=%sh]", type, nom, heure, duree, theme, HF());
+    return String.format ("Reportage -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Thème=%s, Heure de Fin=%sh]", type, heure, duree, nom, theme, HF());
 
 }
     

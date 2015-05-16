@@ -24,7 +24,7 @@ public ProgrammeMere (String type, int heure, String nom) {             // méth
     this.nom=nom;
 }
 
-public ProgrammeMere (String type, int heure, String nom, short duree) { 
+public ProgrammeMere (String type, int heure,short duree, String nom) { 
     
     this.type = type;
     this.heure = heure;

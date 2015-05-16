@@ -22,7 +22,7 @@ public class Fiction extends ProgrammeMere {                // Cette classe sert
     
     public Fiction (String type, int heure, short duree, String nom, short annee,  String nom_realisateur, boolean redif) {  // méthode de polymorphisme. 
         
-        super(type,heure,nom,duree);
+        super(type,heure,duree,nom);
         this.nom_realisateur= nom_realisateur;
         this.redif = redif;
         this.annee = annee;
@@ -55,7 +55,7 @@ public boolean GetRedif () {          // getter de la rediffusion.
 
 public String toString() {              // On retourne une phrase qui nous donne le descriptif complet du programme de fiction diffusé grâce aux getters précedemment déclarés. 
     
-    return String.format ("Fiction -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Année=%s, Nom du réalisateurr=%s, Rediffusion =%s, HeureFin=%sh]", type, nom, heure, duree, annee, nom_realisateur, redif, HF());
+    return String.format ("Fiction -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Année=%s, Nom du réalisateurr=%s, Rediffusion =%s, HeureFin=%sh]", type, heure, duree, nom, annee, nom_realisateur, redif, HF());
 
 }
 

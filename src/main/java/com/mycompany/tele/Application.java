@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.io.*; // Librairie : http://docs.oracle.com/javase/7/docs/api/java/io/package-summary.html
 
 
-public class Application 
+public class Application
 {  
      
         
@@ -31,7 +31,7 @@ public class Application
         programmeList.add("divertissement, 12, toto, titi");
         programmeList.add("reportage, 0, 3, test, culturel");
         programmeList.add("reportage, 2, 3, test, monde");
-        programmeList.add("FICTION, 10, 2, A.I., 2001, Steven Spielberg, OUI");
+        programmeList.add("FICTION, 10, 2, A.I., 2001, Christopher Nolan, OUI");
         programmeList.add("divertiSSement, 12, Vendreditoutestpermis, Arthur");
 
 
@@ -71,12 +71,17 @@ public class Application
 			System.out.println(f.toString());
 		}
                 
+      
+                
+                
+                
+                
+               
+                
                
                 
                 // Après vérification de l'énoncé, seul les programmes de types divertissement et fiction peuvent se croiser
              
     }
-   }
-
-
+}
 
