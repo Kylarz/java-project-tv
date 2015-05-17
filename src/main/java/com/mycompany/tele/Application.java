@@ -33,11 +33,13 @@ public class Application
         programmeList.add("divertissement, 12, toto, titi");
         programmeList.add("reportage, 7, 3, Enquête d'action, culturel");
         programmeList.add("reportage, 2, 3, Au coeur d'une friterie, monde");
-        programmeList.add("FICTION, 10, 2, Interstellar, 2015, Christopher Nolan, OUI");
+        programmeList.add("FICTION, 22, 2, Interstellar, 2015, Christopher Nolan, OUI");
         programmeList.add("divertiSSement, 12, Vendreditoutestpermis, Arthur");
+        
         logger.trace ("Programmes ajoutés");
-       for (int i = 0; i< Grilletele.length;i++) {
-           Grilletele[i]=0;
+        
+       for (int i = 0; i< Grilletele.length;i++) { // Boucle initialisant le tableau d'heure à 0, 0 = horraire disponible.
+           Grilletele[i]=0; 
            
        } 
        
@@ -46,10 +48,10 @@ public class Application
             
             String[] TSplitted = programmeList.get(i).split(",");
             if (TSplitted[0].equalsIgnoreCase("Divertissement")) {              // si le premier champ est équivalent à "Divertissement", alors on ajoute ce programme comme étant un divertissement dans le tableau des programmes. 
-               Tabprog[i]= new Divertissement("Divertissement", Integer.parseInt(TSplitted[1].trim()),TSplitted[2],TSplitted[3]);
+               Tabprog[i]= new Divertissement("Divertissement", Integer.parseInt(TSplitted[1].trim()),TSplitted[2],TSplitted[3]); // Création de l'objet divertissement
                
                for (int j = Tabprog[i].heure; j < Tabprog[i].heure+Tabprog[i].duree; j++) {
-                   Tabnom[j]= Tabprog[i].nom;
+                   Tabnom[j]= Tabprog[i].nom; // On sauvegarde le nom pour permettre ensuite un meilleur affichage
                    Grilletele[j]=Grilletele[j]+1;                               // en fonction de la durée du programme diffusé, on réserve les cases suivantes du tableau en fonction de la durée pour y afficher le programme.
                }
                }
@@ -61,7 +63,7 @@ public class Application
                 Tabprog[i]=new Fiction("Fiction", Integer.parseInt(TSplitted[1].trim()), Short.parseShort(TSplitted[2].trim()),TSplitted[3], Short.parseShort(TSplitted[4].trim()), TSplitted[5], Boolean.parseBoolean(TSplitted[6].trim()));
                 for (int j = Tabprog[i].heure; j < Tabprog[i].heure+Tabprog[i].duree; j++) {
                     Tabnom[j]= Tabprog[i].nom;
-                   Grilletele[j]=1;
+                   Grilletele[j]=Grilletele[j]+1;
             }
                 }
             
@@ -73,34 +75,41 @@ public class Application
                         }   // la méthode .trim() permet, entre deux champs, de ne pas prendre en compte les espaces. 
                              }
             
-            
+             // A ce stade, le tableau d'heure s'est remplit à 1 pour les programmes et parfois à 2 si 2 programmes se superposent, si 4, et bien 4 programmes se superposent.
             
         
-            }
+        }
+        
+        
+        
+            
+        
+            
         
         System.out.println("Voici le programme TV de la journée :");
-        for (int y = 0; y< Grilletele.length;y++) {
+        for (int y = 0; y< Grilletele.length;y++) {            // On parcours la grille d'horraire télé pour afficher le programme TV de la journée et afficher l'erreur de superposition dès qu'elle est detectée
             
-            if (Tabnom[y] == null) {
+            if (Tabnom[y] == null) { // L'emplacement est vide, donc il n'y a pas de programme à cette heure
                 System.out.println(" Ce créneau est vide " + y + "h " + Grilletele[y]);
                 logger.trace("Aucun programme sur ce créneau");
             }
-            else if (Tabnom[y] != null) {
-                
-            
+            else if (Tabnom[y] != null) { // L'emplacement contient bien un nom de programme, donc il y'a une diffusionà
+
             System.out.println(Tabnom[y] +" Est diffusé dans le créneau " + y + "h " + Grilletele[y]);
   
-                    }
+            }
             
-            if (Grilletele[y] == 2) {
-                System.out.println("SUPERPOSITION DETECTED ERROR : Il y'a une superposition de programme !");
+            if (Grilletele[y] >= 2) { // Si plusieurs programme ont mis leurs réservations sur cette heure alors il y'a conflit et donc superposition donc -> error
+                System.out.println("SUPERPOSITION DETECTED ERROR : Il y'a une superposition de programme !"); 
                 logger.trace("Superposition de programmes");
             }
         
-        }logger.info("Arrêt du programme");
-        
-        
         }
+        
+        logger.info("Arrêt du programme");
+        
+        
+    }
 }
 
                 // Après vérification de l'énoncé, seul les programmes de types divertissement et fiction peuvent se croiser
