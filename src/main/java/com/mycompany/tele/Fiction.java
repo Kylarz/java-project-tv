@@ -15,7 +15,7 @@ public class Fiction extends ProgrammeMere {                // Cette classe sert
 
     public short annee;
     public String nom_realisateur;
-    public boolean redif;                                   // Elle prend pour attributs l'année de réalisation, le nom du réalisateur, et si il s'agit d'une rediffusion ou non. 
+    public boolean redif;                                   // Elle prend pour attributs l'année de réalisation, le nom du réalisateur,s'il s'agit d'une rediffusion ou non et ceux de la classe mère.
     
     
     
