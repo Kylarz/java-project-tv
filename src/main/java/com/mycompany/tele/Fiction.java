@@ -71,7 +71,8 @@ this.redif=_redif;
 
 
 
-public String toString() {              // On retourne une phrase qui nous donne le descriptif complet du programme de fiction diffusé grâce aux getters précedemment déclarés. 
+    @Override
+    public String toString() {              // On retourne une phrase qui nous donne le descriptif complet du programme de fiction diffusé grâce aux getters précedemment déclarés. 
     
     return String.format ("Fiction -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Année=%s, Nom du réalisateurr=%s, Rediffusion =%s, HeureFin=%sh]", type, heure, duree, nom, annee, nom_realisateur, redif, HF());
 

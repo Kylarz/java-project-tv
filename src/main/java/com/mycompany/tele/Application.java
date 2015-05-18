@@ -1,7 +1,6 @@
 package com.mycompany.tele;
 
 import java.util.ArrayList;
-import java.io.*; // Librairie : http://docs.oracle.com/javase/7/docs/api/java/io/package-summary.html
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +21,7 @@ public class Application
         
         
                       
-        logger.info("Démarrage");
+        logger.info("Demarrage");
         System.out.println( "Bienvenue, voici la liste des programmes :" );
         
         ArrayList<String> programmeList = new ArrayList();
@@ -36,44 +35,55 @@ public class Application
         programmeList.add("FICTION, 22, 2, Interstellar, 2015, Christopher Nolan, OUI");
         programmeList.add("divertiSSement, 12, Vendreditoutestpermis, Arthur");
         
-        logger.trace ("Programmes ajoutés");
+        logger.info ("Programmes ajoutes");
+        
+        
         
        for (int i = 0; i< Grilletele.length;i++) { // Boucle initialisant le tableau d'heure à 0, 0 = horraire disponible.
            Grilletele[i]=0; 
-           
        } 
+       logger.info("Initialisation de la Grille contenant les programme a 0");
        
-       
+       logger.info("Creation des constructeurs par type des programmes");
         for (int i = 0; i < programmeList.size(); i++ ) {                                         // Pour tout les programmes ajoutés précedemment, on les trie
             
             String[] TSplitted = programmeList.get(i).split(",");
             if (TSplitted[0].equalsIgnoreCase("Divertissement")) {              // si le premier champ est équivalent à "Divertissement", alors on ajoute ce programme comme étant un divertissement dans le tableau des programmes. 
                Tabprog[i]= new Divertissement("Divertissement", Integer.parseInt(TSplitted[1].trim()),TSplitted[2],TSplitted[3]); // Création de l'objet divertissement
-               
+               logger.trace("Un objet divertissement vient d'etre cree");
                for (int j = Tabprog[i].heure; j < Tabprog[i].heure+Tabprog[i].duree; j++) {
                    Tabnom[j]= Tabprog[i].nom; // On sauvegarde le nom pour permettre ensuite un meilleur affichage
+                   logger.trace("Un objet divertissement est cree et rempli son creneau");
                    Grilletele[j]=Grilletele[j]+1;                               // en fonction de la durée du programme diffusé, on réserve les cases suivantes du tableau en fonction de la durée pour y afficher le programme.
                }
                }
+            logger.info("Les programmes de type Divertissement on été ajoutes");
                
             
             
             
             if (TSplitted[0].equalsIgnoreCase("Fiction")) {                     // si le premier champ est équivalent à "Fiction", alors on ajoute ce programme comme étant une fiction dans le tableau des programmes. 
                 Tabprog[i]=new Fiction("Fiction", Integer.parseInt(TSplitted[1].trim()), Short.parseShort(TSplitted[2].trim()),TSplitted[3], Short.parseShort(TSplitted[4].trim()), TSplitted[5], Boolean.parseBoolean(TSplitted[6].trim()));
+                logger.trace("Un objet Fiction vient d'etre cree");
                 for (int j = Tabprog[i].heure; j < Tabprog[i].heure+Tabprog[i].duree; j++) {
                     Tabnom[j]= Tabprog[i].nom;
+                    logger.trace("Un objet Fiction est cree et rempli son creneau horaire");
                    Grilletele[j]=Grilletele[j]+1;
             }
                 }
+            logger.info("Les programmes de type Fiction ont été ajoutes");
             
             if (TSplitted[0].equalsIgnoreCase("Reportage")) {                   // si le premier champ est équivalent à "Reportage", alors on ajoute ce programme comme étant un reportage dans le tableau des programmes. 
                 Tabprog[i]=new Reportage("Reportage", Integer.parseInt(TSplitted[1].trim()), Short.parseShort(TSplitted[2].trim()),TSplitted[3], TSplitted[4]);
+                logger.trace("Un objet reportage vient d'etre cree");
                 for (int j = Tabprog[i].heure; j < Tabprog[i].heure+Tabprog[i].duree; j++) {                 
                    Tabnom[j]= Tabprog[i].nom;
-                   Grilletele[j]=Grilletele[j]+1;                               // en fonction de la durée du programme diffusé, on réserve les cases suivantes du tableau en fonction de la durée pour y afficher le programme.
+                   Grilletele[j]=Grilletele[j]+1;
+                   logger.trace("Un objet reportage est cree et rempli son creneau horaire"); // en fonction de la durée du programme diffusé, on réserve les cases suivantes du tableau en fonction de la durée pour y afficher le programme.
                         }   // la méthode .trim() permet, entre deux champs, de ne pas prendre en compte les espaces. 
                              }
+            
+            logger.info("Les programmes de type Reportage on été ajoutes");
             
              // A ce stade, le tableau d'heure s'est remplit à 1 pour les programmes et parfois à 2 si 2 programmes se superposent, si 4, et bien 4 programmes se superposent.
             
@@ -87,6 +97,7 @@ public class Application
             
         
         System.out.println("Voici le programme TV de la journée :");
+        logger.info("Calcul des programmes, verfication des creneaux horaires et des superpositions");
         for (int y = 0; y< Grilletele.length;y++) {            // On parcours la grille d'horraire télé pour afficher le programme TV de la journée et afficher l'erreur de superposition dès qu'elle est detectée
             
             if (Tabnom[y] == null) { // L'emplacement est vide, donc il n'y a pas de programme à cette heure
@@ -106,9 +117,7 @@ public class Application
         
         }
         
-        logger.info("Arrêt du programme");
-        
-        
+        logger.info("Arret du programme");  
     }
 }
 

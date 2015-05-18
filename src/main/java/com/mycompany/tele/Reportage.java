@@ -46,7 +46,8 @@ public void SetDuree(short _duree) {
 
 
 
-public String toString() {          // On retourne une phrase qui nous donne le descriptif complet du programme de reportage diffusé grâce aux getters précedemment déclarés.
+    @Override
+    public String toString() {          // On retourne une phrase qui nous donne le descriptif complet du programme de reportage diffusé grâce aux getters précedemment déclarés.
     
     return String.format ("Reportage -> [Type=%s, Heure=%s, Durée=%s, Nom=%s, Thème=%s, Heure de Fin=%sh]", type, heure, duree, nom, theme, HF());
 

@@ -42,7 +42,8 @@ public int HeureFin() {                     // Divertissement à sa propre fonct
 
 
 
-public String toString() {              // On retourne une phrase qui nous donne le descriptif complet du programme de divertissement diffusé grâce aux getters précedemment déclarés.
+        @Override
+        public String toString() {              // On retourne une phrase qui nous donne le descriptif complet du programme de divertissement diffusé grâce aux getters précedemment déclarés.
     
     return String.format ("Divertissement -> [Type=%s, Heure=%s, Nom=%s, Durée=%s, Animateur=%s, HeureFin=%sh]", type, heure, nom,2, nom_animateur, HeureFin());
     
